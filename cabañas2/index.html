@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="es-AR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Calendario de Reservas</title>
+
+  <!-- Flatpickr -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="./css.css?v=20260108-1" />
+</head>
+
+<body>
+  <header class="topbar">
+    <a class="back" href="../index.html" aria-label="Volver al inicio">← Atrás</a>
+
+    <div class="brand">
+      <div class="brand-title">Calendario de Reservas</div>
+      <div class="brand-sub">
+    
+      </div>
+    </div>
+
+    <div class="legend" aria-label="Leyenda">
+      <span class="legItem"><i class="dot dot-free"></i> Disponible</span>
+      <span class="legItem"><i class="dot dot-booked"></i> Ocupado</span>
+      <span class="legItem"><i class="dot dot-past"></i> Pasado</span>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <div class="grid">
+
+      <!-- Solicitud -->
+      <section class="card">
+        <div class="cardHead">
+          <h2>Solicitud</h2>
+          <p class="sub">Completá tus datos y elegí fechas disponibles.</p>
+        </div>
+
+        <div class="cardBody">
+          <form id="formReserva" class="form">
+            <div class="formGrid">
+
+              <div class="field">
+                <span>Cabaña</span>
+                <select id="cabana" required>
+                  <option value="Cabana 1">Cabaña 1</option>
+                  <option value="Cabana 2">Cabaña 2</option>
+                  <option value="Cabana 3">Cabaña 3</option>
+                  <option value="Cabana 4">Cabaña 4</option>
+                </select>
+              </div>
+
+              <div class="field">
+                <span>Personas</span>
+                <select id="personas" required>
+                   <option value="1">1 persona</option>
+                  <option value="2">2 personas</option>
+                  <option value="3">3 personas</option>
+                  <option value="4">4 personas</option>
+                  <option value="5">5 personas</option>
+                  <option value="6">6 personas</option>
+                  
+                </select>
+              </div>
+
+              <div class="field span2">
+                <span>Nombre</span>
+                <input id="nombre" type="text" placeholder="Ej: Pepito" required />
+              </div>
+
+              <div class="field span2">
+                <span>Teléfono (WhatsApp)</span>
+                <input id="telefono" type="text" placeholder="Ej: 3515555555" inputmode="numeric" />
+              </div>
+
+              <div class="field">
+                <span>Ingreso (check-in)</span>
+                <input id="checkin" type="text" placeholder="Seleccioná fecha" readonly />
+              </div>
+
+              <div class="field">
+                <span>Salida (check-out)</span>
+                <input id="checkout" type="text" placeholder="Seleccioná fecha" readonly />
+              </div>
+
+              <div class="span2">
+                <button id="btnEnviar" type="submit" class="btnPrimary">Enviar solicitud</button>
+                <div id="msg" class="msg"></div>
+              </div>
+
+            </div>
+          </form>
+
+          
+        </div>
+      </section>
+
+      <!-- Disponibilidad -->
+      <section class="card">
+        <div class="cardHead">
+          <h2>Disponibilidad</h2>
+       
+        </div>
+
+        <div class="cardBody">
+          <div class="availability">
+
+            <div class="calPanel">
+              <div class="calPanelHead">
+                <div class="calTitle">Calendario</div>
+                <div class="calHint">Elegí fechas libres</div>
+              </div>
+              <div id="calInline"></div>
+            </div>
+
+            <div class="listPanel">
+              <div class="listPanelHead">
+                <div class="listTitle">Reservas confirmadas</div>
+                <div class="listHint">(cabaña seleccionada)</div>
+              </div>
+              <ul id="listaConfirmadas" class="list"></ul>
+              <div class="muted small" style="margin-top:.5rem">
+              
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <!-- Flatpickr -->
+  <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+
+  <!-- JS -->
+  <script src="./js.js?v=20260108-1"></script>
+</body>
+</html>

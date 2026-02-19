@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es-AR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Panel del Dueño</title>
+  <link rel="stylesheet" href="owner.css?v=20260108-2" />
+</head>
+
+<body>
+  <div class="wrap">
+    <header class="top">
+      <div class="topLeft">
+        <h1>Panel del Dueño</h1>
+        
+ 
+      </div>
+
+      <div class="topActions">
+        <button id="btnReload" class="btn ghost">Recargar</button>
+       <!-- <button id="btnReset" class="btn danger">Reset total</button>-->
+        <button id="btnLogout" class="btn ghost">Salir</button>
+      </div>
+    </header>
+
+    <!-- LOGIN -->
+    <section id="loginBox" class="card">
+      <div class="row">
+        <label>
+          PIN
+          <input id="pin" type="password" placeholder="Ingresá tu PIN" />
+        </label>
+        <button id="btnLogin" class="btn">Entrar</button>
+      </div>
+      <div id="loginMsg" class="msg"></div>
+    </section>
+
+    <!-- PANEL -->
+    <section id="panel" class="card hidden">
+      <div class="filters">
+        <div class="row">
+          <label>
+            Cabaña
+            <select id="fCabana">
+              <option value="">Todas</option>
+              <option value="Cabana 1">Cabana 1</option>
+              <option value="Cabana 2">Cabana 2</option>
+              <option value="Cabana 3">Cabana 3</option>
+              <option value="Cabana 4">Cabana 4</option>
+            </select>
+          </label>
+
+          <label>
+            Estado
+            <select id="fEstado">
+              <option value="">Todos</option>
+              <option value="PENDIENTE">PENDIENTE</option>
+              <option value="CONFIRMADA">CONFIRMADA</option>
+              <option value="RECHAZADA">RECHAZADA</option>
+              <option value="CANCELADA">CANCELADA</option>
+            </select>
+          </label>
+
+          <label class="grow">
+            Buscar
+            <input id="q" placeholder="Nombre / Teléfono / Fechas" />
+          </label>
+        </div>
+
+        <div id="statusLine" class="muted"></div>
+      </div>
+
+      <div class="tableWrap">
+        <table class="table ownerTable">
+          <thead>
+            <tr>
+              <th>Estado</th>
+              <th>Cabaña</th>
+              <th>Nombre</th>
+              <th>Teléfono</th>
+              <th>Personas</th>
+              <th>Check-in</th>
+              <th>Check-out</th>
+              <th>Noches</th>
+              <th>Total</th>
+              <th>Creado</th>
+              <th>Acciones</th>
+            </tr>
+          </thead>
+          <tbody id="tbody"></tbody>
+        </table>
+      </div>
+
+      <div class="foot muted small">
+        Tip: el total se toma del backend (Código.gs). Si 4 noches = $300.000, estás OK.
+      </div>
+    </section>
+  </div>
+
+  <script src="owner.js"></script>
+</body>
+</html>

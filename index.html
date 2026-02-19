@@ -1,0 +1,606 @@
+<!DOCTYPE html>
+<html lang="es-AR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Cabañas Sol y Luna. Consultá disponibilidad y reservá tu estadía con atención personalizada." />
+  <title>Cabañas Sol y Luna</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+  <!-- Swiper -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="css.css" />
+</head>
+<!-- SOCIAL FLOAT RIGHT -->
+<div class="social-float-right">
+
+  <a href="https://www.facebook.com/profile.php?id=61588319046786"
+     target="_blank"
+     class="social-btn facebook"
+     aria-label="Facebook">
+    <i class="fab fa-facebook-f"></i>
+  </a>
+
+  <a href="https://www.instagram.com/soly.luna4737/"
+     target="_blank"
+     class="social-btn instagram"
+     aria-label="Instagram">
+    <i class="fab fa-instagram"></i>
+  </a>
+
+
+</div>
+<body>
+  <!-- Header -->
+  <header class="header" id="header">
+    <div class="container">
+      <nav class="nav" aria-label="Navegación principal">
+        <a href="#hero" class="logo" aria-label="Inicio Cabañas Sol y Luna">
+          <img src="img/logo-solyluna.svg" alt="Cabañas Sol y Luna" />
+        </a>
+
+        <!-- Desktop links -->
+        <ul class="nav-links" id="navLinks">
+          <li><a href="#propiedades">Cabañas</a></li>
+          <li><a href="#porque">¿Por qué elegirnos?</a></li>
+          <li><a href="#servicios">Servicios</a></li>
+          <li><a href="#calificaciones">Calificaciones</a></li>
+          <li><a href="#contacto">Contacto</a></li>
+          <li><a href="cabañas2/index.html" class="nav-cta">Disponibilidad</a></li>
+        </ul>
+
+        <!-- Botón menú mobile -->
+        <div class="nav-actions">
+          <button class="mobile-nav-toggle" id="mobileNavToggle"
+            aria-label="Abrir menú" aria-expanded="false" aria-controls="mobileMenu" type="button">
+            <i class="fas fa-bars"></i>
+          </button>
+        </div>
+      </nav>
+
+      <!-- Menú mobile -->
+      <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+        <ul>
+          <li><a href="#propiedades" class="mobile-link">Cabañas</a></li>
+          <li><a href="#porque" class="mobile-link">¿Por qué elegirnos?</a></li>
+          <li><a href="#servicios" class="mobile-link">Servicios</a></li>
+          <li><a href="#calificaciones" class="mobile-link">Calificaciones</a></li>
+          <li><a href="#contacto" class="mobile-link">Contacto</a></li>
+          <li><a href="cabañas2/index.html" class="mobile-link cta-link">Consultar disponibilidad</a></li>
+        </ul>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section class="hero" id="hero" aria-label="Portada">
+      <div class="swiper hero-swiper" id="heroSwiper" aria-label="Carrusel principal">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide"><img src="img/fotoPatio1.jpeg" alt="Cabañas Sol y Luna - Foto 1" loading="eager" decoding="async"></div>
+          <div class="swiper-slide"><img src="img/fotopatio2.jpeg" alt="Cabañas Sol y Luna - Foto 2" loading="eager" decoding="async"></div>
+          <div class="swiper-slide"><img src="img/fotopatio3.jpeg" alt="Cabañas Sol y Luna - Foto 3" loading="eager" decoding="async"></div>
+       
+        </div>
+
+        <div class="swiper-pagination hero-pagination"></div>
+        <div class="swiper-button-prev hero-nav hero-prev" aria-label="Anterior"></div>
+        <div class="swiper-button-next hero-nav hero-next" aria-label="Siguiente"></div>
+      </div>
+
+      <div class="hero-overlay" aria-hidden="true"></div>
+
+      <div class="hero-content">
+        <div class="hero-badge">
+          <span class="hero-badge-dot"></span>
+          Potrero de Garay, Córdoba
+          <span class="hero-badge-fiestas">🎄</span>
+        </div>
+
+        <h1>Cabañas Sol y Luna</h1>
+        <p>
+          Descansá en un entorno natural, con comodidad real y atención personalizada.
+          Consultá fechas y te respondemos rápido por WhatsApp.
+        </p>
+
+        <div class="hero-cta">
+          <a class="btn-primary" href="cabañas2/index.html">
+            <i class="fas fa-calendar-check"></i>
+            Consultar disponibilidad
+          </a>
+          <a class="btn-outline btn-outline--dark" href="https://wa.me/5493512173571" target="_blank" rel="noopener">
+            <i class="fab fa-whatsapp"></i>
+            WhatsApp
+          </a>
+        </div>
+
+        <div class="hero-chips" aria-label="Beneficios">
+          <span class="chip"><i class="fas fa-mountain"></i> Vista & naturaleza</span>
+          <span class="chip"><i class="fas fa-wifi"></i> Wi-Fi</span>
+          <span class="chip"><i class="fas fa-car"></i> Cochera (según disp.)</span>
+          <span class="chip"><i class="fas fa-star"></i> Excelente atención</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Propiedades -->
+    <section id="propiedades" class="section section--no-divider" aria-label="Cabañas disponibles">
+      <div class="container-wide">
+        <div class="section-header">
+          <h2>Nuestras cabañas</h2>
+          <p>Elegí una opción y mirá las fotos o revisá la disponibilidad.</p>
+        </div>
+
+        <div class="properties-grid">
+          <article class="property-card">
+            <img class="property-image" src="img/foto1.jpeg" alt="Cabaña 1" loading="lazy" decoding="async">
+            <div class="property-content">
+              <h3 class="property-title">Cabaña 1</h3>
+              <div class="property-location">Cabañas Sol y Luna</div>
+              <div class="property-features">🛏 2 habitaciones · 🛁 1 baño · 👥 5 pers.</div>
+
+              <div class="property-price">
+                <span class="price-amount">Consultar</span>
+                <div class="card-actions">
+                  <button class="view-button" type="button" data-open-lightbox="c1">Ver fotos</button>
+                  <a class="avail-button" href="cabañas2/index.html?cabana=1">Ver disponibilidad</a>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="property-card">
+            <img class="property-image" src="img/foto4.jpeg" alt="Cabaña 2" loading="lazy" decoding="async">
+            <div class="property-content">
+              <h3 class="property-title">Cabaña 2</h3>
+              <div class="property-location">Cabañas Sol y Luna</div>
+              <div class="property-features">🛏 2 habitaciones · 🛁 1 baño · 👥 5 pers.</div>
+
+              <div class="property-price">
+                <span class="price-amount">Consultar</span>
+                <div class="card-actions">
+                  <button class="view-button" type="button" data-open-lightbox="c2">Ver fotos</button>
+                  <a class="avail-button" href="cabañas2/index.html?cabana=2">Ver disponibilidad</a>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="property-card">
+            <img class="property-image" src="img/foto17.jpeg" alt="Cabaña 3" loading="lazy" decoding="async">
+            <div class="property-content">
+              <h3 class="property-title">Cabaña 3</h3>
+              <div class="property-location">Cabañas Sol y Luna</div>
+              <div class="property-features">🛏 2 habitaciones · 🛁 1 baño · 👥 5 pers.</div>
+
+              <div class="property-price">
+                <span class="price-amount">Consultar</span>
+                <div class="card-actions">
+                  <button class="view-button" type="button" data-open-lightbox="c3">Ver fotos</button>
+                  <a class="avail-button" href="cabañas2/index.html?cabana=3">Ver disponibilidad</a>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="property-card">
+            <img class="property-image" src="img/foto27.jpeg" alt="Cabaña 4" loading="lazy" decoding="async">
+            <div class="property-content">
+              <h3 class="property-title">Cabaña 4</h3>
+              <div class="property-location">Cabañas Sol y Luna</div>
+              <div class="property-features">🛏 2 habitaciones · 🛁 1 baño · 👥 5 pers.</div>
+
+              <div class="property-price">
+                <span class="price-amount">Consultar</span>
+                <div class="card-actions">
+                  <button class="view-button" type="button" data-open-lightbox="c4">Ver fotos</button>
+                  <a class="avail-button" href="cabañas2/index.html?cabana=4">Ver disponibilidad</a>
+                </div>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <div class="sep-soft" aria-hidden="true"></div>
+
+    <!-- ¿POR QUÉ ELEGIRNOS? + VIDEO -->
+    <section id="porque" class="sl-section sl-why">
+      <div class="sl-container">
+        <header class="sl-head">
+          <h2>¿Por qué elegirnos?</h2>
+          <p class="sl-subtitle">
+            Un espacio pensado para descansar y disfrutar con total comodidad.
+            <span class="sl-badge-fiestas">🎄 Temporada fiestas</span>
+          </p>
+        </header>
+
+        <div class="sl-why-grid">
+          <div class="sl-card sl-why-left">
+            <p class="sl-lead">
+              Cabañas Sol y Luna es un lugar tranquilo para cortar la rutina: naturaleza, aire libre y una estadía simple, cómoda y sin vueltas.
+            </p>
+
+            <div class="sl-feature">
+              <div class="sl-ico">🏡</div>
+              <div>
+                <h4>Comodidad real</h4>
+                <p>Ambientes amplios, equipamiento completo y una experiencia directa.</p>
+              </div>
+            </div>
+
+            <div class="sl-feature">
+              <div class="sl-ico">📶</div>
+              <div>
+                <h4>Servicios incluidos</h4>
+                <p>Wi-Fi, cocina equipada y detalles que hacen la diferencia.</p>
+              </div>
+            </div>
+
+            <div class="sl-feature">
+              <div class="sl-ico">💚</div>
+              <div>
+                <h4>Atención cuidada</h4>
+                <p>Respondemos rápido por WhatsApp y te ayudamos a elegir la mejor opción.</p>
+              </div>
+            </div>
+
+            <div class="sl-cta">
+              <a class="sl-btn sl-btn-primary" href="cabañas2/index.html">Consultar disponibilidad</a>
+              <a class="sl-btn sl-btn-outline" href="#servicios">Ver servicios</a>
+            </div>
+
+            <div class="sl-chips">
+              <span class="sl-chip">🌿 Entorno natural</span>
+              <span class="sl-chip">🛏️ Ideal para descansar</span>
+              <span class="sl-chip">👨‍👩‍👧‍👦 Opciones para familias</span>
+              <span class="sl-chip">📍 Llegada coordinada</span>
+            </div>
+          </div>
+
+          <aside class="sl-card sl-why-right">
+            <div class="sl-right-head">
+              <h3>Video del recorrido</h3>
+              <p class="sl-muted">Tocá “play” para ver el exterior y el entorno.</p>
+            </div>
+
+            <div class="sl-video">
+              <video class="sl-video-el" controls playsinline preload="metadata" poster="img/foto1.jpeg">
+                <source src="img/video1.mp4" type="video/mp4" />
+                Tu navegador no soporta video HTML5.
+              </video>
+              <div class="sl-garland" aria-hidden="true"></div>
+            </div>
+
+            <div class="sl-note">
+              <strong>Tip:</strong> en celular podés poner pantalla completa.
+            </div>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <div class="sep-soft" aria-hidden="true"></div>
+
+    <!-- SERVICIOS + UBICACIÓN + MAPA -->
+    <section id="servicios" class="sl-section sl-services">
+      <div class="sl-container">
+        <header class="sl-head">
+          <h2>Servicios</h2>
+          <p class="sl-subtitle">Todo lo necesario para una estadía cómoda, con ubicación a mano.</p>
+        </header>
+
+        <div class="sl-services-row">
+          <div class="sl-card sl-services-card">
+            <h3>Incluye</h3>
+
+            <div class="sl-cols">
+              <ul class="sl-list">
+                <li>📶 Wi-Fi</li>
+                <li>📺 TV</li>
+                <li>🔥 Calefacción</li>
+                <li>🍳 Cocina equipada</li>
+                <li>🌡️ Microondas</li>
+                <li>⭐ Atención personalizada</li>
+              </ul>
+
+              <ul class="sl-list">
+                <li>🚗 Cochera</li>
+                <li>👶 Cunas <small>(consultar)</small></li>
+                <li>🪑 Reposeras</li>
+                <li>🥩 Asador</li>
+                <li>🧼 Limpieza <small>(consultar)</small></li>
+              </ul>
+            </div>
+
+            <div class="sl-mini-chips">
+              <span class="sl-chip">🌿 Entorno natural</span>
+              <span class="sl-chip">🛌 Ideal para descansar</span>
+              <span class="sl-chip">💬 Atención cuidada</span>
+            </div>
+          </div>
+
+          <div class="sl-card sl-location-card" id="ubicacion">
+            <h3>Ubicación</h3>
+            <p class="sl-muted">Potrero de Garay, Córdoba. Coordiná tu llegada por WhatsApp.</p>
+
+            <div class="sl-contact">
+              <div class="sl-contact-item"><span>📍</span> <strong>Potrero de Garay, Córdoba</strong></div>
+              <div class="sl-contact-item"><span>📞</span> <span>+54 9 3512 173571</span></div>
+              <div class="sl-contact-item"><span>💬</span> <span>WhatsApp: 5493512173571</span></div>
+            </div>
+
+            <a class="sl-btn sl-btn-primary sl-btn-full" href="https://wa.me/5493512173571" target="_blank" rel="noopener">
+              Consultar por WhatsApp
+            </a>
+
+            <div class="sl-fiestas-box">
+              <div class="sl-fiestas-ico">🥂</div>
+              <div>
+                <strong>Finde / Fiestas</strong>
+                <div class="sl-muted">Consultá promos y fechas disponibles.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="sl-card sl-map-wide">
+          <div class="sl-map-head">
+            <h3>Mapa</h3>
+            <span class="sl-muted">Podés acercar/alejar y abrir en Google Maps.</span>
+          </div>
+
+          <div class="sl-map-frame">
+            <iframe
+              title="Mapa Potrero de Garay"
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+              src="https://www.google.com/maps?q=-31.8245087,-64.5560303&z=17&hl=es&output=embed"
+
+              allowfullscreen=""
+            ></iframe>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="sep-soft" aria-hidden="true"></div>
+
+    <!-- CALIFICACIONES + RESEÑAS -->
+    <section id="calificaciones" class="sl-section sl-ratings">
+      <div class="sl-container">
+        <header class="sl-head">
+          <h2>Calificaciones</h2>
+          <p class="sl-subtitle">Opiniones de huéspedes.</p>
+        </header>
+
+        <div class="sl-score-grid">
+          <article class="sl-score sl-card">
+            <div class="sl-score-ico">⭐</div>
+            <div class="sl-score-num">9.0</div>
+            <div class="sl-score-label">Excelente</div>
+          </article>
+
+          <article class="sl-score sl-card">
+            <div class="sl-score-ico">🟢</div>
+            <div class="sl-score-num">4.7</div>
+            <div class="sl-score-label">Muy bueno</div>
+          </article>
+
+          <article class="sl-score sl-card">
+            <div class="sl-score-ico">🧡</div>
+            <div class="sl-score-num">4.5</div>
+            <div class="sl-score-label">Recomendado</div>
+          </article>
+        </div>
+
+        <div class="sl-reviews sl-card" id="reviewsBox">
+          <div class="sl-reviews-top">
+            <h3>Reseñas destacadas</h3>
+            <div class="sl-reviews-actions">
+              <span class="sl-muted">Se deslizan solas, también podés arrastrar.</span>
+              <button class="sl-nav sl-nav-prev" type="button" aria-label="Anterior">‹</button>
+              <button class="sl-nav sl-nav-next" type="button" aria-label="Siguiente">›</button>
+            </div>
+          </div>
+
+          <div class="sl-reviews-fade sl-reviews-fade-left" aria-hidden="true"></div>
+          <div class="sl-reviews-fade sl-reviews-fade-right" aria-hidden="true"></div>
+
+          <div class="sl-reviews-track" id="reviewsTrack" aria-label="Carrusel de reseñas">
+            <article class="sl-review">
+              <div class="sl-review-head">
+                <div class="sl-avatar">🙂</div>
+                <div>
+                  <div class="sl-name">Federico</div>
+                  <div class="sl-stars">★★★★★</div>
+                </div>
+                <span class="sl-tag">Familiar</span>
+              </div>
+              <p>“Excelente para ir en familia. Mucho espacio y buen entorno.”</p>
+            </article>
+
+            <article class="sl-review">
+              <div class="sl-review-head">
+                <div class="sl-avatar">😊</div>
+                <div>
+                  <div class="sl-name">Mariana</div>
+                  <div class="sl-stars">★★★★★</div>
+                </div>
+                <span class="sl-tag">Pareja</span>
+              </div>
+              <p>“Tranquilo, cómodo y bien ubicado. Volveríamos.”</p>
+            </article>
+
+            <article class="sl-review">
+              <div class="sl-review-head">
+                <div class="sl-avatar">😄</div>
+                <div>
+                  <div class="sl-name">Lucas</div>
+                  <div class="sl-stars">★★★★☆</div>
+                </div>
+                <span class="sl-tag">Descanso</span>
+              </div>
+              <p>“La atención por WhatsApp es rápida y resolutiva. Recomendado.”</p>
+            </article>
+
+            <article class="sl-review">
+              <div class="sl-review-head">
+                <div class="sl-avatar">🤩</div>
+                <div>
+                  <div class="sl-name">Sofía</div>
+                  <div class="sl-stars">★★★★★</div>
+                </div>
+                <span class="sl-tag">Naturaleza</span>
+              </div>
+              <p>“Entorno hermoso, ideal para desconectar. Muy limpio.”</p>
+            </article>
+
+            <article class="sl-review">
+              <div class="sl-review-head">
+                <div class="sl-avatar">🙂</div>
+                <div>
+                  <div class="sl-name">Nicolás</div>
+                  <div class="sl-stars">★★★★☆</div>
+                </div>
+                <span class="sl-tag">Amigos</span>
+              </div>
+              <p>“Buen espacio, servicios completos y fácil llegada.”</p>
+            </article>
+
+            <article class="sl-review">
+              <div class="sl-review-head">
+                <div class="sl-avatar">😁</div>
+                <div>
+                  <div class="sl-name">Carla</div>
+                  <div class="sl-stars">★★★★★</div>
+                </div>
+                <span class="sl-tag">Recomendado</span>
+              </div>
+              <p>“Excelente relación precio/calidad. Volvemos seguro.”</p>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA final -->
+    <section class="cta-final" id="contacto">
+      <div class="cta-final-container">
+        <div class="cta-final-text">
+          <h2>¿Querés consultar?</h2>
+          <p>Escribinos por WhatsApp y te respondemos con disponibilidad y opciones.</p>
+
+          <div class="cta-final-actions">
+            <a href="https://wa.me/5493512173571" target="_blank" class="cta-wsp" rel="noopener">
+              <i class="fab fa-whatsapp"></i>
+              WhatsApp
+            </a>
+
+            <a href="cabañas2/index.html" class="cta-form">
+              <i class="fas fa-calendar-check"></i>
+              Consultar disponibilidad
+            </a>
+          </div>
+
+          <div class="cta-final-extra">
+            <span><strong>Horario:</strong> 09:00 a 20:00</span><br />
+            <span><strong>Cabañas Sol y Luna</strong></span>
+          </div>
+        </div>
+
+        <div class="cta-final-box">
+          <h4>Datos</h4>
+          <ul>
+            <li><i class="fas fa-phone"></i> +54 9 351 2173571</li>
+            <li><i class="fas fa-envelope"></i> edgardo.davilaos@gmail.com</li>
+            <li><i class="fas fa-location-dot"></i> Potrero de Garay, Córdoba</li>
+          </ul>
+          <p class="cta-tip">Tip: enviá fecha + cantidad de personas y te pasamos opciones.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-content container">
+      <div class="footer-section">
+        <h3>Cabañas Sol y Luna</h3>
+        <p>Atención personalizada todo el año. Consultá por fechas y promos.</p>
+      </div>
+
+      <div class="footer-section">
+        <h3>Accesos</h3>
+        <ul class="footer-links">
+          <li><a href="#propiedades">Cabañas</a></li>
+          <li><a href="#porque">¿Por qué elegirnos?</a></li>
+          <li><a href="#servicios">Servicios</a></li>
+          <li><a href="#calificaciones">Calificaciones</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-section">
+        <h3>Contacto</h3>
+        <ul class="footer-links">
+          <li><a href="tel:+5493512173571"><i class="fas fa-phone"></i> +54 9 351 2173571</a></li>
+          <li><a href="mailto:edgardo.davilaos@gmail.com"><i class="fas fa-envelope"></i> edgardo.davilaos@gmail.com</a></li>
+          <li><span><i class="fas fa-location-dot"></i> Potrero de Garay, Córdoba</span></li>
+        </ul>
+      </div>
+
+      <div class="footer-section">
+        <h3>Redes</h3>
+        <ul class="footer-links">
+          <li class="social"><a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i> Instagram</a></li>
+          <li class="social"><a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i> Facebook</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom container">
+      <p>&copy; 2025 Cabañas Sol y Luna. Todos los derechos reservados.</p>
+    </div>
+  </footer>
+
+  <!-- Scroll top -->
+  <button class="scroll-to-top" id="scrollToTop" aria-label="Volver arriba" type="button">
+    <i class="fas fa-arrow-up"></i>
+  </button>
+
+  <!-- WhatsApp flotante -->
+  <a class="wsp-float" id="wspFloat"
+     href="https://wa.me/5493512173571" target="_blank"
+     aria-label="Abrir WhatsApp para consultar" rel="noopener">
+    <i class="fab fa-whatsapp"></i>
+  </a>
+
+  <!-- LIGHTBOX (Swiper) -->
+  <div class="lightbox" id="lightbox" aria-hidden="true" role="dialog" aria-label="Galería de fotos">
+    <button class="close-lightbox" type="button" aria-label="Cerrar galería" id="closeLightboxBtn">✖</button>
+
+    <div class="swiper lightbox-swiper" id="lightboxSwiper" aria-label="Carrusel de fotos">
+      <div class="swiper-wrapper" id="lightbox-swiper-wrapper"></div>
+      <div class="swiper-pagination"></div>
+      <div class="swiper-button-prev" aria-label="Anterior"></div>
+      <div class="swiper-button-next" aria-label="Siguiente"></div>
+    </div>
+  </div>
+
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+  <!-- JS -->
+  <script src="js.js"></script>
+</body>
+</html>

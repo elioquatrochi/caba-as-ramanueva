@@ -1,0 +1,513 @@
+:root{
+  --bg:#0b1220;
+  --card:#0f1a2f;
+  --muted:#a7b0c0;
+  --text:#e9eef7;
+  --border:rgba(255,255,255,.08);
+
+  --btn:#2a6cff;
+  --danger:#b3261e;
+
+  --radius:16px;
+}
+
+*{ box-sizing:border-box; }
+
+body{
+  margin:0;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Inter, Arial, sans-serif;
+  background:
+    radial-gradient(1100px 700px at 10% 10%, rgba(42,108,255,.18), transparent 60%),
+    radial-gradient(900px 600px at 90% 30%, rgba(0,255,179,.10), transparent 60%),
+    var(--bg);
+  color:var(--text);
+}
+
+.wrap{
+  max-width: 1400px;     /* más ancho en PC para que “entre” */
+  margin:0 auto;
+  padding: 18px;
+}
+
+.muted{ color:var(--muted); }
+.small{ font-size:12px; }
+.hidden{ display:none; }
+
+/* TOP */
+.top{
+  display:flex;
+  align-items:flex-end;
+  justify-content:space-between;
+  gap:12px;
+  margin-bottom:16px;
+}
+.topLeft h1{ margin:0 0 6px 0; font-size:28px; letter-spacing:.2px; }
+.topActions{
+  display:flex;
+  gap:10px;
+  flex-wrap:wrap;
+  align-items:center;
+}
+
+/* CARD */
+.card{
+  background:
+    radial-gradient(800px 500px at 10% 10%, rgba(42,108,255,.10), transparent 60%),
+    linear-gradient(180deg, rgba(255,255,255,.05), transparent 70%),
+    var(--card);
+  border:1px solid var(--border);
+  border-radius: var(--radius);
+  padding:16px;
+  box-shadow: 0 18px 40px rgba(0,0,0,.35);
+}
+
+/* FORM/FILTERS */
+.row{
+  display:flex;
+  gap:10px;
+  align-items:flex-end;
+  flex-wrap:wrap;
+}
+label{
+  display:grid;
+  gap:6px;
+  font-size:13px;
+  color:var(--muted);
+}
+label.grow{
+  flex:1;
+  min-width: 260px;
+}
+
+input, select{
+  height:40px;
+  padding:0 12px;
+  border-radius:12px;
+  border:1px solid var(--border);
+  outline:none;
+  background: rgba(255,255,255,.04);
+  color:var(--text);
+  min-width: 220px;
+}
+input::placeholder{ color: rgba(167,176,192,.65); }
+
+.btn{
+  height:40px;
+  border:none;
+  border-radius:12px;
+  background: var(--btn);
+  color:white;
+  cursor:pointer;
+  font-weight:800;
+  padding:0 14px;
+}
+.btn.ghost{
+  background: transparent;
+  border:1px solid var(--border);
+  color: var(--text);
+}
+.btn.danger{ background: var(--danger); }
+
+.msg{ min-height:18px; margin-top:10px; color: var(--muted); }
+
+.filters{ display:grid; gap:10px; margin-bottom:12px; }
+
+/* TABLE WRAP: sin barra horizontal */
+.tableWrap{
+  border:1px solid var(--border);
+  border-radius:14px;
+  overflow: hidden;           /* clave */
+}
+
+/* TABLA: entra a lo ancho */
+.table{
+  width:100%;
+  border-collapse: collapse;
+  table-layout: fixed;        /* clave */
+  min-width: 0;               /* clave */
+}
+
+.table thead th{
+  position:sticky;
+  top:0;
+  z-index: 2;
+  background:#0c162a;
+  border-bottom:1px solid var(--border);
+  padding:10px 10px;
+  text-align:left;
+  font-size:12px;
+  letter-spacing:.2px;
+  white-space: nowrap;
+}
+
+.table td{
+  border-bottom:1px solid var(--border);
+  padding:10px 10px;
+  font-size:12px;
+  vertical-align:middle;
+
+  /* hace que no reviente el ancho */
+  overflow:hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* columnas con contenido largo: permitir corte prolijo */
+.table td:nth-child(4), /* Teléfono */
+.table td:nth-child(10){ /* Creado */
+  white-space: normal;
+  word-break: break-word;
+  line-height: 1.2;
+}
+
+/* Fila */
+.table tbody tr{
+  background: rgba(255,255,255,.02);
+}
+.table tbody tr:hover{
+  background: rgba(255,255,255,.04);
+}
+
+/* Chips */
+.chip{
+  display:inline-flex;
+  padding:4px 10px;
+  border-radius:999px;
+  font-weight:900;
+  font-size:11px;
+  border:1px solid var(--border);
+  white-space: nowrap;
+}
+.chip.pendiente{ background: rgba(201,162,39,.18); color:#ffe9a6; border-color: rgba(201,162,39,.35); }
+.chip.confirmada{ background: rgba(31,122,58,.18); color:#c8ffd8; border-color: rgba(31,122,58,.35); }
+.chip.rechazada{ background: rgba(179,38,30,.18); color:#ffd0cc; border-color: rgba(179,38,30,.35); }
+.chip.cancelada{ background: rgba(124,138,166,.18); color:#d7dff0; border-color: rgba(124,138,166,.35); }
+
+/* Acciones */
+.actions{
+  display:flex;
+  gap:8px;
+  flex-wrap:wrap;
+  justify-content:flex-start;
+}
+.iconBtn{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  gap:8px;
+  padding:7px 9px;
+  border-radius:12px;
+  border:1px solid var(--border);
+  background: rgba(255,255,255,.04);
+  color: var(--text);
+  cursor:pointer;
+  text-decoration:none;
+  font-weight:900;
+  font-size:12px;
+  white-space: nowrap;
+}
+.iconBtn.ok{ border-color: rgba(31,122,58,.35); }
+.iconBtn.no{ border-color: rgba(179,38,30,.35); }
+.iconBtn.del{ border-color: rgba(124,138,166,.35); }
+.iconBtn.wa{ border-color: rgba(0,200,120,.35); }
+
+.foot{ margin-top:14px; }
+
+/* =========================
+   MOBILE: tabla -> tarjetas
+   (requiere data-label en TD)
+   ========================= */
+@media (max-width: 860px){
+  .wrap{ padding: 12px; }
+  .top{ align-items:flex-start; }
+  .topLeft h1{ font-size:22px; }
+
+  input,select{ min-width: 180px; }
+  label.grow{ min-width: 200px; }
+
+  /* ocultar header tabla */
+  .table thead{ display:none; }
+
+  .table,
+  .table tbody,
+  .table tr{
+    display:block;
+    width:100%;
+  }
+
+  .table tbody tr{
+    border-top: 1px solid rgba(255,255,255,.06);
+    padding: 10px;
+    background: rgba(255,255,255,.03);
+  }
+
+  .table td{
+    display:flex;
+    width:100%;
+    padding:10px 10px;
+    border-bottom:1px solid rgba(255,255,255,.06);
+
+    white-space: normal;
+    overflow: visible;
+    text-overflow: clip;
+  }
+
+  .table td::before{
+    content: attr(data-label);
+    flex: 0 0 110px;
+    color: var(--muted);
+    font-weight:800;
+    padding-right:10px;
+  }
+
+  /* última celda sin borde */
+  .table td:last-child{ border-bottom:none; }
+
+  /* acciones full width (adiós “Accion es”) */
+  .actions{
+    display:grid;
+    grid-template-columns: 1fr;
+    gap:10px;
+    width:100%;
+  }
+  .iconBtn{
+    width:100%;
+    justify-content:center;
+    padding:10px 12px;
+  }
+}
+
+/* tablet: compacta un poco sin romper */
+@media (max-width: 1100px){
+  .table thead th,
+  .table td{
+    padding:9px 8px;
+    font-size:12px;
+  }
+}
+/* =========================
+   MOBILE - COMPACTO (override)
+   ========================= */
+@media (max-width: 860px){
+
+  /* tarjeta más compacta */
+  .table tbody tr{
+    padding: 12px !important;
+    border-radius: 14px;
+    margin: 10px 10px 14px;
+    background: rgba(255,255,255,.035) !important;
+    border: 1px solid rgba(255,255,255,.08);
+  }
+
+  /* sacar “una raya” por cada celda (es lo que te arma ese look “lista larga”) */
+  .table td{
+    border-bottom: 0 !important;
+    padding: 6px 0 !important;      /* menos alto */
+    gap: 10px;
+    align-items: baseline;
+  }
+
+  /* etiqueta más chica y fija */
+  .table td::before{
+    flex: 0 0 92px !important;
+    font-size: 12px;
+    opacity: .9;
+  }
+
+  /* valores */
+  .table td{
+    font-size: 13px;
+    line-height: 1.25;
+  }
+
+  /* que “Creado” no te haga 2 renglones gigantes */
+  .table td:nth-child(10){
+    font-size: 12px;
+    opacity: .9;
+  }
+
+  /* --- Header de tarjeta: Estado + Cabaña más “pro” --- */
+  /* Estado (td 1) */
+  .table tbody tr td:nth-child(1){
+    padding-top: 0 !important;
+    display:flex;
+    justify-content: space-between;
+    align-items:center;
+  }
+  /* que el label "Estado" no aparezca (queda redundante arriba) */
+  .table tbody tr td:nth-child(1)::before{
+    content: "" !important;
+    flex: 0 0 0 !important;
+    padding: 0 !important;
+  }
+
+  /* Cabaña (td 2) como subtítulo (sin label) */
+  .table tbody tr td:nth-child(2){
+    padding-top: 2px !important;
+    margin-top: -2px;
+    opacity: .95;
+  }
+  .table tbody tr td:nth-child(2)::before{
+    content: "" !important;
+    flex: 0 0 0 !important;
+    padding: 0 !important;
+  }
+
+  /* línea divisoria suave después del “header” */
+  .table tbody tr td:nth-child(2){
+    padding-bottom: 10px !important;
+    margin-bottom: 10px;
+    border-bottom: 1px solid rgba(255,255,255,.08) !important;
+  }
+
+  /* --- Grilla interna 2 columnas para el resto --- */
+  /* desde Teléfono (4) hasta Creado (10): en dos columnas cuando entra */
+  .table tbody tr td:nth-child(n+3):nth-child(-n+10){
+    display:grid;
+    grid-template-columns: 92px 1fr;
+  }
+
+  /* Acciones: más compacto y con menos aire */
+  .actions{
+    margin-top: 10px;
+    gap: 10px !important;
+  }
+
+  .iconBtn{
+    padding: 10px 12px !important;
+    border-radius: 14px !important;
+    font-size: 13px;
+  }
+
+  /* chip un poco más chico */
+  .chip{
+    font-size: 11px;
+    padding: 4px 10px;
+  }
+}
+/* =========================================================
+   FIX MOBILE: tarjetas compactas (NO requiere data-label)
+   Pegalo al FINAL del owner.css
+   ========================================================= */
+@media (max-width: 860px){
+
+  /* contenedor */
+  .wrap{ padding: 14px; }
+
+  /* en móvil no queremos la barra horizontal de tabla */
+  .tableWrap{
+    overflow: visible !important;
+    border-radius: 16px;
+  }
+
+  /* ocultar encabezado */
+  .table thead{ display:none !important; }
+
+  /* reset “tabla” a layout de tarjetas */
+  .table{
+    width: 100% !important;
+    min-width: 0 !important;
+    border-collapse: separate !important;
+  }
+  .table tbody{ display:block !important; }
+  .table tbody tr{
+    display:block !important;
+    margin: 12px 0 !important;
+    padding: 12px 12px 10px !important;
+    border: 1px solid var(--border) !important;
+    border-radius: 16px !important;
+    background: rgba(255,255,255,.035) !important;
+    box-shadow: 0 10px 26px rgba(0,0,0,.25);
+  }
+
+  .table tbody tr td{
+    display:flex !important;
+    justify-content: space-between !important;
+    align-items: baseline !important;
+    gap: 12px !important;
+
+    border: 0 !important;
+    padding: 7px 0 !important;        /* compacto */
+    font-size: 13px;
+    line-height: 1.25;
+  }
+
+  /* labels (columna izquierda) */
+  .table tbody tr td::before{
+    content: "" !important;           /* por defecto vacío */
+    flex: 0 0 110px !important;       /* ancho del label (no gigante) */
+    max-width: 110px !important;
+    font-size: 12px !important;
+    font-weight: 700 !important;
+    color: var(--muted) !important;
+    opacity: .95 !important;
+  }
+
+  /* labels por columna (sin data-label) */
+  .table tbody tr td:nth-child(1)::before{ content:"Estado" !important; }
+  .table tbody tr td:nth-child(2)::before{ content:"Cabaña" !important; }
+  .table tbody tr td:nth-child(3)::before{ content:"Nombre" !important; }
+  .table tbody tr td:nth-child(4)::before{ content:"Teléfono" !important; }
+  .table tbody tr td:nth-child(5)::before{ content:"Personas" !important; }
+  .table tbody tr td:nth-child(6)::before{ content:"Check-in" !important; }
+  .table tbody tr td:nth-child(7)::before{ content:"Check-out" !important; }
+  .table tbody tr td:nth-child(8)::before{ content:"Noches" !important; }
+  .table tbody tr td:nth-child(9)::before{ content:"Total" !important; }
+  .table tbody tr td:nth-child(10)::before{ content:"Creado" !important; }
+  .table tbody tr td:nth-child(11)::before{ content:"Acciones" !important; }
+
+  /* HEADER de tarjeta: Estado arriba (chip a la derecha) */
+  .table tbody tr td:nth-child(1){
+    padding-top: 0 !important;
+    padding-bottom: 10px !important;
+    margin-bottom: 6px !important;
+    border-bottom: 1px solid rgba(255,255,255,.08) !important;
+  }
+  .table tbody tr td:nth-child(1)::before{
+    content: "" !important;           /* no repetimos “Estado” arriba */
+    flex: 0 0 0 !important;
+    max-width: 0 !important;
+  }
+  /* chip alineado a la derecha */
+  .table tbody tr td:nth-child(1) .chip{
+    margin-left: auto !important;
+  }
+
+  /* Cabaña como título corto (sin label) */
+  .table tbody tr td:nth-child(2)::before{
+    content: "" !important;
+    flex: 0 0 0 !important;
+    max-width: 0 !important;
+  }
+  .table tbody tr td:nth-child(2){
+    font-weight: 900 !important;
+    padding-top: 8px !important;
+  }
+
+  /* “Creado” más chico para que no rompa la tarjeta */
+  .table tbody tr td:nth-child(10){
+    font-size: 12px !important;
+    opacity: .9 !important;
+    word-break: break-word;
+  }
+
+  /* Acciones: botones full width, sin “huecos raros” */
+  .table tbody tr td:nth-child(11){
+    padding-top: 12px !important;
+    margin-top: 10px !important;
+    border-top: 1px solid rgba(255,255,255,.08) !important;
+  }
+  .actions{
+    width: 100% !important;
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    gap: 10px !important;
+  }
+  .iconBtn{
+    width: 100% !important;
+    justify-content: center !important;
+    padding: 12px 12px !important;
+    border-radius: 14px !important;
+    font-size: 13px !important;
+  }
+}
